@@ -306,7 +306,7 @@ def process_all_charities():
     execution_count = 0
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, args=["--start-maximized"])
+        browser = p.chromium.launch(headless=True, args=["--start-maximized"])
         context = browser.new_context(ignore_https_errors=True)
         page = context.new_page()
 
